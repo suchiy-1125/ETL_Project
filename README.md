@@ -5,10 +5,10 @@ Group Members: Anastasia Valdes, Saya Uchiyama, Michael Harris, Kevin Eugene
 
 1. [Selection of Datasets](#selection-of-datasets)
 2. [Description of Datasets](#description-of-datasets)
-3. [Selection of Database](#selection-of-database)
+3. [Transformation of Data](#transformation-of-data)
+4. [Selection of Relationship Database Environment](#selection-of-relationship-database-environment)
 4. [ERD](#erd)
 5. [Loading into PostgresSQL](#loading-into-postgressql)
-6. [Confirmation of Data Integrity](#confirmation-of-data-integrity)
 
 ***
 
@@ -17,7 +17,7 @@ Group Members: Anastasia Valdes, Saya Uchiyama, Michael Harris, Kevin Eugene
 Source: [Nashville Land Parcels]( https://www.kaggle.com/alehe90/nashville-land-parcels)
 Source: [Nashville Housing Data]( https://www.kaggle.com/tmthyjames/nashville-housing-data)
 
-[Back to top](#etl-project)
+NOTE: The data files are too large to upload to GitHub. 
 
 ***
 
@@ -25,8 +25,6 @@ Source: [Nashville Housing Data]( https://www.kaggle.com/tmthyjames/nashville-ho
 
 * nashville_20190827200234.csv - this file contains data scraped from padctn.org by Drew Lehe and posted on Kaggle.com. Includes residential land parcels, multifamily units, commercial, vacant, and industrial space. Sales from 2015-July 2019 were scraped from http://www.padctn.org/services/recent-sales/ Information about each parcel of land was scraped from its "Printable Property Report Card," example: www.padctn.org/prc/property/1/card/1.
 * Nashville_housing_data_2013_2016.csv - this file contains valuation data for residential homes in Nashville Tennessee. Data posted by tmthyjames, no source attributed. 
-
-[Back to top](#etl-project)
 
 ***
 
@@ -42,8 +40,6 @@ Data transformation was accomplished with jupyter using Pandas.
 ## Selection of Relationship Database Environment
 
 Postgres SQL server used for the database environment. 
-
-[Back to top](#etl-project)
 
 ***
 
@@ -109,10 +105,12 @@ assess_land_improved money
 total_appraisal_value_improved money
 sq_footage_improved float8
 custom_bldg_type varchar
-land_area_acres float8```
+land_area_acres float8
+```
+
 ***
 
-[Back to top](#etl-project)
+[Back to top](#etl_project)
 
 ***
 
@@ -153,34 +151,38 @@ CREATE TABLE parcel (
     improvement_value money,
     land_area varchar,
     land_value money,
-	location1 varchar,
+    location1 varchar,
     map_parcel varchar,
     most_recent_sale_date date,
     most_recent_sale_price money,
     rooms float8,
-	sq_footage varchar,
+    sq_footage varchar,
     tax_district varchar,
     total_appraisal_value money,
     year_built float8,
     zone1 float8,
-	sale_date date,
+    sale_date date,
     sale_price money,
     assess_improvement_improved money,
-	recent_sale_price_improved money,
+    recent_sale_price_improved money,
     improvement_value_improved money,
     assess_total_improved money,
     land_value_improved money,
     assess_land_improved money,
     total_appraisal_value_improved money,
-	sq_footage_improved float8,
+    sq_footage_improved float8,
     custom_bldg_type varchar,
     land_area_acres float8
 	);
 ```
 ***
-* Load clean_parcels.csv file into the database
-* Load clean_housing file into the database
-[Back to top](#etl-project)
+## Load clean_parcels.csv file into the database
+![ Parcel_screenshot.png]( Parcel_screenshot.png)
+
+## Load clean_housing file into the database
+![ Housing_screenshot.png]( Housing_screenshot.png)
+
+[Back to top](#etl_project)
 
 
 
