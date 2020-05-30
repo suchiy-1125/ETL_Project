@@ -1,0 +1,55 @@
+housing as h
+-
+parcel_id varchar
+land_use varchar
+property_address varchar
+property_city varchar
+sale_date date
+sale_price money
+legal_reference varchar
+acreage float8
+tax_district varchar
+land_value money
+building_value money
+total_value money
+finished_area float8
+foundation_type varchar
+year_built float8
+
+parcels as p
+-
+assessment_clarification varchar
+assess_improvement money
+assess_land money
+assess_total money
+assess_year float8
+bldg_type varchar
+current_owner varchar
+deed_reference varchar
+foundation_type varchar
+improvement_value money
+land_area varchar
+land_value money
+location1 varchar
+map_parcel varchar
+most_recent_sale_date date
+most_recent_sale_price money
+rooms float8
+sq_footage varchar
+tax_district varchar
+total_appraisal_value money
+year_built float8
+zone1 float8
+sale_date date
+sale_price money
+assess_improvement_improved money
+recent_sale_price_improved money
+improvement_value_improved money
+assess_total_improved money
+land_value_improved money
+assess_land_improved money
+total_appraisal_value_improved money
+sq_footage_improved float8
+custom_bldg_type varchar
+land_area_acres float8
+	
